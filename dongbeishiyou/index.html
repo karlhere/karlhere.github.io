@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>东北石油大学成人教育学院-学历提升与在职教育服务平台</title>
+    <meta name="description" content="东北石油大学成人教育学院官方门户，提供高起专、专升本、高起本等成人高等教育招生信息。涵盖油气储运工程、机械设计制造及其自动化等热门专业，面向在职人员开展学历继续教育与职业技能培训。">
+    <meta name="keywords" content="东北石油大学, 成人教育学院, 成人高考, 在职本科, 专升本, 继续教育, 油气储运">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #004e92;
+            --secondary-color: #000428;
+            --accent-color: #ff9900;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #003d7a;
+        }
+
+        .btn-accent {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn-accent:hover {
+            background-color: #e68a00;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .header-main .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+            padding: 5px 0;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-image {
+            flex: 0 0 400px;
+            height: 300px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+
+        /* Quick Nav / Cards */
+        .quick-nav {
+            margin-top: -40px;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 60px;
+        }
+
+        .quick-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .quick-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-5px);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .quick-card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .quick-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* About Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .about-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-item h4 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .stat-item span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .about-image img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Programs Section */
+        .programs-section {
+            background-color: var(--white);
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .program-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .program-img {
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+        }
+        
+        .program-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .program-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            border-radius: 20px;
+        }
+
+        .program-info {
+            padding: 20px;
+        }
+
+        .program-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .program-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .program-desc {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* Admission Info */
+        .admission-info {
+            background-color: #f0f4f8;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background-color: #ddd;
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--white);
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .step-item h4 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .step-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            padding: 0 10px;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: var(--white);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            background-color: #fafafa;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-content {
+            padding: 20px;
+            color: var(--text-light);
+            background-color: var(--white);
+        }
+
+        /* Contact / Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+
+            .hero-image {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* Simplified mobile handling */
+            }
+
+            .header-main .container {
+                justify-content: center;
+            }
+
+            .steps-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .steps-container::before {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="header-top">
+        <div class="container">
+            <span>欢迎访问东北石油大学成人教育学院官方网站！</span>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <a href="#" class="logo">
+                    东北石油大学成人教育学院
+                    <span>NEPU Adult Education</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">学院首页</a></li>
+                        <li><a href="#about">学院概况</a></li>
+                        <li><a href="#programs">招生专业</a></li>
+                        <li><a href="#admission">招生流程</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </nav>
+                <a href="#contact" class="btn btn-primary" style="display: none; @media(min-width: 768px){display:inline-block;}">在线报名</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>提升学历 · 增强实力 · 改变未来</h1>
+                <p>东北石油大学成人教育学院依托学校优势学科，为在职人员提供高质量的高起专、专升本学历继续教育服务。石油石化特色专业，助力职场进阶。</p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; @media(min-width: 992px){justify-content: flex-start;}">
+                    <a href="#programs" class="btn btn-accent">查看招生专业</a>
+                    <a href="#about" class="btn" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3);">了解学院</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Using a generic university/education related placeholder -->
+                <img src="https://picsum.photos/seed/university_edu/400/300" alt="校园环境">
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Nav -->
+    <div class="container quick-nav">
+        <div class="quick-nav-grid">
+            <div class="quick-card">
+                <h3>高起专</h3>
+                <p>高中起点升专科，快速获取大专学历，提升职业门槛。</p>
+                <a href="#programs" class="btn btn-primary" style="padding: 6px 16px; font-size: 0.9rem;">查看专业</a>
+            </div>
+            <div class="quick-card">
+                <h3>专升本</h3>
+                <p>专科起点升本科，攻读本科学历，满足公务员及考证需求。</p>
+                <a href="#programs" class="btn btn-primary" style="padding: 6px 16px; font-size: 0.9rem;">查看专业</a>
+            </div>
+            <div class="quick-card">
+                <h3>高起本</h3>
+                <p>高中起点升本科，5年制学制，直接获取本科学历。</p>
+                <a href="#programs" class="btn btn-primary" style="padding: 6px 16px; font-size: 0.9rem;">查看专业</a>
+            </div>
+            <div class="quick-card">
+                <h3>学历查询</h3>
+                <p>学信网可查，国家承认学历，学信档案可查。</p>
+                <a href="#" class="btn btn-accent" style="padding: 6px 16px; font-size: 0.9rem;">登录查询</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>学院概况</h2>
+                    <p>东北石油大学成人教育学院是学校继续教育的主办单位，承担着学校成人高等教育、继续教育、非学历培训等任务。学院依托学校在石油石化领域的学科优势，形成了独具特色的继续教育体系。</p>
+                    <p>多年来，学院始终坚持“育人为本、质量第一”的办学理念，为社会培养了数以万计的各类应用型人才。学院教学设施完善，师资力量雄厚，管理规范严谨，教学质量和办学水平得到了社会各界的广泛认可。</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>30+</h4>
+                            <span>办学年限</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>20+</h4>
+                            <span>开设专业</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>10万+</h4>
+                            <span>培养人才</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/classroom_study/600/400" alt="教学现场">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="section programs-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>热门招生专业</h2>
+                <p>依托学校优势学科，开设石油石化特色专业，适应社会需求</p>
+            </div>
+            <div class="program-grid">
+                <!-- Program 1 -->
+                <article class="program-card">
+                    <div class="program-img">
+                        <span class="program-tag">热门推荐</span>
+                        <img src="https://picsum.photos/seed/oil_gas/300/200" alt="油气储运工程">
+                    </div>
+                    <div class="program-info">
+                        <h3>油气储运工程</h3>
+                        <div class="program-meta">
+                            <span>专升本</span>
+                            <span>学制：2.5年</span>
+                        </div>
+                        <p class="program-desc">培养掌握油气储运基本理论和技术，从事油气储运工程规划、设计、施工、管理等方面工作的工程技术人才。</p>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%;">咨询报名</a>
+                    </div>
+                </article>
+
+                <!-- Program 2 -->
+                <article class="program-card">
+                    <div class="program-img">
+                        <img src="https://picsum.photos/seed/mechanical/300/200" alt="机械设计制造及其自动化">
+                    </div>
+                    <div class="program-info">
+                        <h3>机械设计制造及其自动化</h3>
+                        <div class="program-meta">
+                            <span>专升本</span>
+                            <span>学制：2.5年</span>
+                        </div>
+                        <p class="program-desc">面向机械制造领域，培养具备机械设计、制造、自动化技术基础知识与应用能力的高级工程技术人才。</p>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%;">咨询报名</a>
+                    </div>
+                </article>
+
+                <!-- Program 3 -->
+                <article class="program-card">
+                    <div class="program-img">
+                        <span class="program-tag">特色专业</span>
+                        <img src="https://picsum.photos/seed/civil_engineering/300/200" alt="土木工程">
+                    </div>
+                    <div class="program-info">
+                        <h3>土木工程</h3>
+                        <div class="program-meta">
+                            <span>专升本</span>
+                            <span>学制：2.5年</span>
+                        </div>
+                        <p class="program-desc">掌握各类土木工程的基本理论和专业知识，具备从事土木工程设计、施工、管理能力的专业人才。</p>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%;">咨询报名</a>
+                    </div>
+                </article>
+
+                <!-- Program 4 -->
+                <article class="program-card">
+                    <div class="program-img">
+                        <img src="https://picsum.photos/seed/computer/300/200" alt="计算机科学与技术">
+                    </div>
+                    <div class="program-info">
+                        <h3>计算机科学与技术</h3>
+                        <div class="program-meta">
+                            <span>专升本</span>
+                            <span>学制：2.5年</span>
+                        </div>
+                        <p class="program-desc">培养具有良好的科学素养，系统地掌握计算机科学与技术，包括计算机硬件、软件与应用的基本理论与方法。</p>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%;">咨询报名</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Process -->
+    <section id="admission" class="section admission-info">
+        <div class="container">
+            <div class="section-title">
+                <h2>招生流程</h2>
+                <p>简单四步，开启您的学历提升之路</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-icon">1</div>
+                    <h4>网上报名</h4>
+                    <p>8月底至9月初登录各省教育考试院成人高考报名系统填写信息。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">2</div>
+                    <h4>现场确认</h4>
+                    <p>携带身份证、毕业证等证件原件及复印件，到指定地点进行资格审核。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">3</div>
+                    <h4>参加考试</h4>
+                    <p>10月下旬参加全国统一成人高考，成绩达到录取分数线即可被录取。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">4</div>
+                    <h4>入学学习</h4>
+                    <p>次年3月入学，利用业余时间进行学习，修满学分，获得毕业证书。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+                <p>关于成人高考的疑问，这里都有答案</p>
+            </div>
+            <div class="faq-grid">
+                <details>
+                    <summary>成人高考的报考条件是什么？</summary>
+                    <div class="faq-content">
+                        报考高起专、高起本考生应具有高中毕业文化程度或同等学力；报考专升本考生必须是已取得经教育部审定核准的国民教育系列高等学校、高等教育自学考试机构颁发的专科毕业证书、本科结业证书或以上证书的人员。
+                    </div>
+                </details>
+                <details>
+                    <summary>成人高考的学习形式是怎样的？</summary>
+                    <div class="faq-content">
+                        我院主要采用业余学习形式（俗称“夜大”），利用周末或节假日时间进行面授学习，不影响正常工作。部分专业可支持线上学习。
+                    </div>
+                </details>
+                <details>
+                    <summary>东北石油大学成人教育的学历国家承认吗？</summary>
+                    <div class="faq-content">
+                        东北石油大学是国家“双一流”建设高校，其成人高等教育学历是国家承认的学历，在学信网（CHSI）可查。符合条件者可申请学士学位。
+                    </div>
+                </details>
+                <details>
+                    <summary>学费是多少？什么时候交费？</summary>
+                    <div class="faq-content">
+                        学费根据黑龙江省物价局及教育部门批准的标准执行，具体金额请咨询招生办。学费通常按学年缴纳，每学年开学初缴纳。
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>东北石油大学成人教育学院</h3>
+                    <p>学校地址：黑龙江省大庆市让胡路区创业大道99号</p>
+                    <p>邮编：163318</p>
+                    <p>联系电话：0459-6393XXX (招生办)</p>
+                    <p>电子邮箱：nepuzsb@163.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">学信网学历查询</a></li>
+                        <li><a href="#">黑龙江省教育考试院</a></li>
+                        <li><a href="#">东北石油大学官网</a></li>
+                        <li><a href="#">校园地图</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>招生专业</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">油气储运工程</a></li>
+                        <li><a href="#">机械设计制造</a></li>
+                        <li><a href="#">计算机科学与技术</a></li>
+                        <li><a href="#">会计学</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>在线咨询</h3>
+                    <p style="margin-bottom: 10px;">工作时间：周一至周五 8:30-17:00</p>
+                    <a href="#" class="btn btn-accent" style="width: 100%; display: block; text-align: center;">在线留言</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 东北石油大学成人教育学院 版权所有 | 辽ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                          </html>
