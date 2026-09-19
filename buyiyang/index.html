@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不一样 - 发现独特视角与生活方式指南</title>
+    <meta name="description" content="不一样是一个专注于发现差异、探索独特生活方式与视角的平台。我们提供关于旅行、美食、艺术、科技及个人成长的深度内容，帮助您跳出常规，发现不一样的精彩世界。">
+    <meta name="keywords" content="不一样, 独特生活方式, 视角, 探索, 深度内容">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --accent-hover: #d35400;
+            --bg-body: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-main: #333333;
+            --text-light: #7f8c8d;
+            --border: #e9ecef;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .search-box {
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 25px;
+            border-radius: 50px;
+            border: 2px solid var(--border);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent);
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            height: 42px;
+            padding: 0 25px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+            width: 5px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .view-all {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #999;
+            border-top: 1px solid var(--border);
+            padding-top: 15px;
+        }
+
+        /* Feature / Highlight */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .feature-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .feature-list {
+            margin: 30px 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .feature-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        /* Stats */
+        .stats-bar {
+            background: var(--primary);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Topics */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .topic-card {
+            position: relative;
+            height: 150px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .topic-card img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .topic-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .topic-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .topic-overlay span {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: 2px solid white;
+            padding: 8px 20px;
+            border-radius: 50px;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: #fff3e0;
+            border-radius: var(--radius);
+            padding: 50px;
+            text-align: center;
+            margin: 60px auto;
+            max-width: 800px;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .feature-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .grid-3 { grid-template-columns: 1fr; }
+            .header-inner { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+            .hero h1 { font-size: 2rem; }
+            .topics-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                不一样<span>.</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">生活方式</a></li>
+                    <li><a href="#">旅行探索</a></li>
+                    <li><a href="#">深度阅读</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">订阅周刊</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>拒绝千篇一律<br>发现<span style="color: var(--accent);">不一样</span>的世界</h1>
+                <p>我们致力于挖掘那些被忽视的角落，提供独特的视角与深度内容。在这里，平庸不是标准，差异才是力量。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索独特的灵感、话题或生活方式...">
+                    <button class="btn btn-primary search-box">搜索</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">精选专题</h2>
+                    <a href="#" class="view-all">查看全部 &rarr;</a>
+                </div>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <img src="https://picsum.photos/seed/travel1/400/300" alt="隐秘旅行">
+                        <div class="topic-overlay"><span>隐秘旅行</span></div>
+                    </div>
+                    <div class="topic-card">
+                        <img src="https://picsum.photos/seed/food1/400/300" alt="极简美食">
+                        <div class="topic-overlay"><span>极简美食</span></div>
+                    </div>
+                    <div class="topic-card">
+                        <img src="https://picsum.photos/seed/art1/400/300" alt="小众艺术">
+                        <div class="topic-overlay"><span>小众艺术</span></div>
+                    </div>
+                    <div class="topic-card">
+                        <img src="https://picsum.photos/seed/tech1/400/300" alt="未来科技">
+                        <div class="topic-overlay"><span>未来科技</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="stats-bar">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>独特视角</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>深度专题</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50k+</h3>
+                    <p>活跃读者</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24h</h3>
+                    <p>灵感更新</p>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">深度阅读</h2>
+                    <a href="#" class="view-all">查看全部 &rarr;</a>
+                </div>
+                <div class="grid-3">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/arch/600/400" alt="建筑美学">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">建筑与空间</span>
+                            <h3 class="card-title">混凝土森林中的孤独：现代建筑背后的情感表达</h3>
+                            <p class="card-desc">探讨现代主义建筑如何通过极简线条传达建筑师内心的疏离感，以及我们如何在其中寻找归属。</p>
+                            <div class="card-meta">
+                                <span>作者：李明</span>
+                                <span>5分钟阅读</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/nature/600/400" alt="自然摄影">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">自然观察</span>
+                            <h3 class="card-title">被遗忘的物种：雨林深处的生态平衡</h3>
+                            <p class="card-desc">深入亚马逊边缘，记录那些濒临灭绝的物种，以及它们在生态系统中的不可替代作用。</p>
+                            <div class="card-meta">
+                                <span>作者：Sarah Chen</span>
+                                <span>8分钟阅读</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/culture/600/400" alt="文化差异">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">文化差异</span>
+                            <h3 class="card-title">当东方遇见西方：餐桌礼仪中的无声交流</h3>
+                            <p class="card-desc">分析不同文化背景下餐桌行为的差异，揭示其背后的社会等级与礼仪规范。</p>
+                            <div class="card-meta">
+                                <span>作者：王大卫</span>
+                                <span>6分钟阅读</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">为什么选择我们</h2>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-image">
+                        <img src="https://picsum.photos/seed/meeting/800/600" alt="团队讨论">
+                    </div>
+                    <div class="feature-content">
+                        <h2>我们不做平庸的复述者</h2>
+                        <p>在信息爆炸的时代，我们选择做那个“不一样”的声音。我们拒绝算法推荐的同质化内容，坚持提供经过深度思考与实地考察的原创观点。</p>
+                        <ul class="feature-list">
+                            <li>严选视角：每一篇文章都经过多重审核，确保观点独特且客观。</li>
+                            <li>深度挖掘：不只停留在表面现象，探究事物背后的逻辑与根源。</li>
+                            <li>多元包容：尊重每一种生活方式，展现世界的丰富性与复杂性。</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="newsletter">
+                    <h2>加入“不一样”社区</h2>
+                    <p style="margin-bottom: 25px; color: #666;">每周发送一份精选的深度阅读清单，打破信息茧房，拓展你的认知边界。</p>
+                    <div class="search-box" style="max-width: 400px; margin: 0 auto;">
+                        <input type="email" placeholder="输入您的邮箱地址">
+                        <button class="btn btn-primary">立即订阅</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color: white; margin-bottom: 20px; display:inline-block;">
+                        不一样<span>.</span>
+                    </a>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        致力于为追求独特体验的读者提供高质量的内容。我们相信，差异创造价值，视角决定高度。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>探索</h4>
+                    <ul>
+                        <li><a href="#">生活方式</a></li>
+                        <li><a href="#">旅行指南</a></li>
+                        <li><a href="#">艺术鉴赏</a></li>
+                        <li><a href="#">科技前沿</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于</h4>
+                    <ul>
+                        <li><a href="#">我们的故事</a></li>
+                        <li><a href="#">编辑团队</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">微博动态</a></li>
+                        <li><a href="#">知乎专栏</a></li>
+                        <li><a href="#">小红书笔记</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 不一样. All rights reserved. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                              </html>
