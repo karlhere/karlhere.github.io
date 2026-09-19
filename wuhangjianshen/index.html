@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="五行健身操官方首页 - 传承传统中医智慧，融合现代运动科学。提供五行健身操动作详解、教学视频、呼吸吐纳指南及健康养生知识，助您调理气血、强身健体。">
+    <meta name="keywords" content="五行健身操,中医养生,健身操教学,气血调理,传统养生">
+    <title>五行健身操-中医养生与气血调理教学指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --primary-light: #4caf50;
+            --accent-color: #ffb74d;
+            --bg-color: #f9fbf9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: rgba(46, 125, 50, 0.1);
+            color: var(--primary-color);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1b5e20;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background-color: #1b5e20;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline:hover {
+            background-color: #e8f5e9;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transform: rotate(2deg);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover img {
+            transform: rotate(0deg);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: var(--border-radius);
+            background-color: var(--bg-color);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: rgba(46, 125, 50, 0.2);
+            background-color: white;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(46, 125, 50, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Five Elements Section */
+        .five-elements {
+            padding: 80px 0;
+        }
+
+        .element-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .element-item {
+            position: relative;
+            height: 250px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+        }
+
+        .element-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .element-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .element-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .element-item:hover .element-overlay {
+            transform: translateY(0);
+        }
+
+        .element-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .element-desc {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        /* Action Section */
+        .action-section {
+            padding: 60px 0;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .action-content h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .action-content p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-top: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+
+            .nav-wrapper {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                五行<span>健身操</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#intro">课程介绍</a></li>
+                    <li><a href="#elements">五行详解</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#start" class="cta-btn">开始练习</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="intro">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-tag">传统与现代的融合</span>
+                    <h1>调气血，强脏腑<br>开启身心平衡之旅</h1>
+                    <p>五行健身操基于中医五行理论，结合现代运动科学。通过五套针对性动作，帮助您疏通经络、调理五脏、改善亚健康状态。</p>
+                    <div class="hero-btns">
+                        <a href="#elements" class="btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            观看教学
+                        </a>
+                        <a href="#faq" class="btn-outline">了解原理</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Using a generic placeholder representing a fitness pose -->
+                    <img src="https://picsum.photos/seed/yoga/600/400" alt="五行健身操演示动作" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么选择五行健身操？</h2>
+                    <p>不仅仅是运动，更是对身体的深度滋养与调理。</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <h3>疏通经络</h3>
+                        <p>通过特定肢体的伸展与扭转，有效刺激人体十二正经，促进气血运行。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </div>
+                        <h3>调理脏腑</h3>
+                        <p>对应五脏六腑的五行属性，通过呼吸配合动作，达到内外兼修的效果。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>科学高效</h3>
+                        <p>无需器械，不受场地限制，每天15分钟即可达到心肺锻炼与柔韧性提升。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Five Elements Section -->
+        <section class="five-elements" id="elements">
+            <div class="container">
+                <div class="section-title">
+                    <h2>五行对应与动作解析</h2>
+                    <p>了解金木水火土的运作机制，精准掌握每一式。</p>
+                </div>
+                <div class="element-grid">
+                    <div class="element-item">
+                        <img src="https://picsum.photos/seed/wood/300/400" alt="木-肝脏与伸展">
+                        <div class="element-overlay">
+                            <span class="element-name">木（肝）</span>
+                            <span class="element-desc">疏肝理气，伸展肢体，缓解压力</span>
+                        </div>
+                    </div>
+                    <div class="element-item">
+                        <img src="https://picsum.photos/seed/fire/300/400" alt="火-心脏与循环">
+                        <div class="element-overlay">
+                            <span class="element-name">火（心）</span>
+                            <span class="element-desc">振奋精神，促进血液循环，养心安神</span>
+                        </div>
+                    </div>
+                    <div class="element-item">
+                        <img src="https://picsum.photos/seed/earth/300/400" alt="土-脾脏与消化">
+                        <div class="element-overlay">
+                            <span class="element-name">土（脾）</span>
+                            <span class="element-desc">健脾益气，调节消化系统，增强代谢</span>
+                        </div>
+                    </div>
+                    <div class="element-item">
+                        <img src="https://picsum.photos/seed/metal/300/400" alt="金-肺脏与呼吸">
+                        <div class="element-overlay">
+                            <span class="element-name">金（肺）</span>
+                            <span class="element-desc">润肺止咳，增强呼吸功能，排毒养颜</span>
+                        </div>
+                    </div>
+                    <div class="element-item">
+                        <img src="https://picsum.photos/seed/water/300/400" alt="水-肾脏与活力">
+                        <div class="element-overlay">
+                            <span class="element-name">水（肾）</span>
+                            <span class="element-desc">固本培元，补充元气，延缓衰老</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="action-section">
+            <div class="container action-content">
+                <h2>即刻开始您的健康蜕变</h2>
+                <p>五行健身操不仅是一套动作，更是一种生活态度。加入我们，学习正确的呼吸法与发力点，让健康回归身体。</p>
+                <a href="#" class="cta-btn" style="background: white; color: var(--primary-color);">预约免费试学</a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="container faq-container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">五行健身操适合哪些人群？</div>
+                    <div class="faq-answer">
+                        <p>本操适合绝大多数成年人，特别是长期伏案工作、体质虚弱、容易疲劳或处于亚健康状态的人群。老年人及有严重心血管疾病患者请在医生指导下进行。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">每天练习多长时间为宜？</div>
+                    <div class="faq-answer">
+                        <p>建议每天练习15-20分钟。初期可分多次练习，重点在于动作的规范性而非时长。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">练习时需要注意什么？</div>
+                    <div class="faq-answer">
+                        <p>请在空气流通处练习，穿着宽松舒适的运动服。动作要缓慢连贯，配合深呼吸，切忌急于求成或用力过猛。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">没有运动基础可以学会吗？</div>
+                    <div class="faq-answer">
+                        <p>完全可以。五行健身操的动作设计强调柔和与平衡，非常适合零基础初学者入门。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>五行健身操</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        传承中华养生智慧，致力于推广科学、安全、高效的居家健身方式。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">课程介绍</a></li>
+                        <li><a href="#elements">五行图解</a></li>
+                        <li><a href="#faq">练习指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>咨询热线：400-123-4567</li>
+                        <li>邮箱：contact@wuxingfit.com</li>
+                        <li>地址：健康养生大道88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 五行健身操官方平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ accordion logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
