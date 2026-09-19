@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="miya蜜芽网址跳转接口 - 提供稳定、快速、安全的官方入口跳转服务。支持多端访问，实时检测域名有效性，保障用户快速进入蜜芽官方网站进行母婴购物与资讯浏览。">
+    <meta name="keywords" content="miya蜜芽网址跳转接口,蜜芽官网,蜜芽入口,母婴电商跳转,miya官网">
+    <title>miya蜜芽网址跳转接口-安全直达蜜芽母婴购物官网</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b6b;
+            --primary-hover: #ff5252;
+            --secondary-color: #4ecdc4;
+            --text-main: #2d3436;
+            --text-secondary: #636e72;
+            --bg-body: #f7f9fc;
+            --bg-card: #ffffff;
+            --border-radius: 12px;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        /* Main Content Area */
+        main {
+            flex: 1;
+            padding-bottom: 60px;
+        }
+
+        /* Status Card */
+        .status-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: var(--border-radius);
+            padding: 40px;
+            color: white;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+        }
+
+        .status-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        /* Button Group */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid rgba(255,255,255,0.5);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-color: white;
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Info Section */
+        .info-section {
+            margin-top: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .info-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .info-content p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        .info-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .info-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .info-image {
+            background-color: #e9ecef;
+            border-radius: var(--border-radius);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #adb5bd;
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #b2bec3;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #636e72;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none; /* 简化移动端展示 */
+            }
+
+            .header-inner {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>miya</span>蜜芽跳转接口
+            </a>
+            <nav class="nav-links">
+                <a href="#home">首页</a>
+                <a href="#features">功能特性</a>
+                <a href="#guide">使用指南</a>
+                <a href="#about">关于我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="container hero">
+            <h1>miya蜜芽网址跳转接口</h1>
+            <p>提供稳定、安全、快速的官方入口直达服务，帮助用户精准访问蜜芽官网，享受正品母婴购物体验。</p>
+            
+            <div class="status-card">
+                <div>
+                    <span class="status-indicator"></span>
+                    <span class="status-text">服务状态：运行正常</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="https://www.miya.com/" target="_blank" class="btn btn-primary">
+                        立即访问官网
+                    </a>
+                    <a href="#guide" class="btn btn-outline">
+                        查看使用方法
+                    </a>
+                </div>
+            </div>
+
+            <div class="features">
+                <article class="feature-item">
+                    <span class="feature-icon">🚀</span>
+                    <h3 class="feature-title">极速响应</h3>
+                    <p class="feature-desc">优化的跳转算法，毫秒级响应，减少等待时间，确保用户快速进入目标页面。</p>
+                </article>
+                <article class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <h3 class="feature-title">官方验证</h3>
+                    <p class="feature-desc">接口严格验证官方域名有效性，杜绝钓鱼网站，保障用户账号与资金安全。</p>
+                </article>
+                <article class="feature-item">
+                    <span class="feature-icon">📱</span>
+                    <h3 class="feature-title">全端兼容</h3>
+                    <p class="feature-desc">支持PC端、移动端及平板设备，自适应屏幕尺寸，提供一致的访问体验。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="container info-section">
+            <h2 class="section-title">使用指南</h2>
+            <div class="info-grid">
+                <div class="info-content">
+                    <h3>如何使用跳转接口？</h3>
+                    <p>本接口旨在为用户提供便捷的访问方式。用户无需手动在浏览器地址栏输入长串网址，只需点击下方的“立即访问官网”按钮或使用提供的API地址即可。</p>
+                    <p>本页面展示了标准的跳转逻辑，适用于个人收藏夹优化或作为网站导航页面的组成部分。</p>
+                    <ul class="info-list">
+                        <li>点击按钮直接跳转至蜜芽官方网站</li>
+                        <li>支持通过API参数进行定向跳转</li>
+                        <li>自动识别设备类型，适配最佳显示效果</li>
+                    </ul>
+                </div>
+                <div class="info-image">
+                    <!-- 占位符示意 -->
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="about" class="container info-section">
+            <h2 class="section-title">常见问题</h2>
+            <div style="max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--text-main);">跳转是否安全？</summary>
+                    <p style="margin-top: 10px; color: var(--text-secondary);">是的，本接口仅提供官方域名的跳转服务，不存储任何用户敏感信息，跳转目标为蜜芽官方网站。</p>
+                </details>
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--text-main);">支持手机浏览器访问吗？</summary>
+                    <p style="margin-top: 10px; color: var(--text-secondary);">完全支持。接口经过移动端适配优化，在手机、平板等设备上均可正常使用。</p>
+                </details>
+                <details style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--text-main);">为什么有时候打不开？</summary>
+                    <p style="margin-top: 10px; color: var(--text-secondary);">如果遇到网络波动或蜜芽官网服务器维护，可能会导致无法访问。请稍后再试或检查网络连接。</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="#">隐私政策</a>
+                <a href="#">使用条款</a>
+                <a href="#">联系支持</a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 miya蜜芽跳转接口. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
