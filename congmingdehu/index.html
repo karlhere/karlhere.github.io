@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="聪明的狐狸爸爸 - 经典儿童文学与绘本资源介绍。了解罗尔德·达尔笔下狐狸爸爸的智慧故事，探索家庭团结、智慧战胜强权以及生存冒险的深刻寓意。提供故事简介、角色分析及阅读指南。">
+    <meta name="keywords" content="聪明的狐狸爸爸, 罗尔德·达尔, 儿童绘本, 狐狸爸爸, 智慧故事, 经典文学">
+    <title>聪明的狐狸爸爸 - 经典儿童文学与绘本阅读指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d35400; /* 狐狸橙色 */
+            --secondary-color: #27ae60; /* 草地绿 */
+            --accent-color: #f1c40f; /* 花朵黄 */
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #fdfbf7;
+            --white: #ffffff;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ba4a00;
+            transform: translateY(-2px);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .hero h1 .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(211, 84, 0, 0.2);
+            transform: rotate(-2deg);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover img {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        /* 主题介绍 */
+        .theme-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 故事概览 */
+        .story-overview {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .story-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .story-text {
+            flex: 1;
+        }
+
+        .story-text h3 {
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .story-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .story-list {
+            margin-top: 20px;
+        }
+
+        .story-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .story-list li::before {
+            content: "✓";
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .story-visual {
+            flex: 1;
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* 角色分析 */
+        .characters-section {
+            padding: 80px 0;
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .character-card {
+            text-align: center;
+        }
+
+        .char-avatar {
+            width: 150px;
+            height: 150px;
+            background-color: #ffe0b2;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            border: 4px solid var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .character-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .character-card .role {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .character-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 互动问答 */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--white);
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-light);
+            display: none;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: "+";
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏导航链接 */
+            }
+
+            .story-container {
+                flex-direction: column;
+            }
+
+            .hero-image img {
+                transform: none;
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <span>🦊</span> 聪明的狐狸爸爸
+                </a>
+                <div class="nav-links">
+                    <a href="#story">故事简介</a>
+                    <a href="#themes">核心主题</a>
+                    <a href="#characters">角色分析</a>
+                    <a href="#faq">常见问题</a>
+                </div>
+                <a href="#read" class="cta-button">开始阅读</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero 首屏 -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>智慧与家庭力量的<br><span class="highlight">完美赞歌</span></h1>
+                    <p>探索罗尔德·达尔笔下最经典的冒险故事。当狡猾的农场主试图消灭狐狸一家时，聪明的狐狸爸爸如何运用智慧，带领家人在地下挖掘出一条通往自由与美食的隧道？</p>
+                    <a href="#story" class="cta-button" style="padding: 15px 35px; font-size: 1.1rem;">深入了解故事</a>
+                </div>
+                <div class="hero-image">
+                    <!-- 使用随机种子图片作为占位符，确保语义 -->
+                    <img src="https://picsum.photos/seed/foxdad/600/400.jpg" alt="聪明的狐狸爸爸绘本封面概念图" width="600" height="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心主题 -->
+    <section id="themes" class="theme-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>为什么这个故事经久不衰？</h2>
+                <p>这不仅是一个关于挖掘的故事，更是关于勇气、团结和智慧战胜强权的寓言。</p>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <span class="card-icon">🧠</span>
+                    <h3>智慧胜于蛮力</h3>
+                    <p>狐狸爸爸没有选择正面硬碰硬，而是利用他对地形的熟悉和挖掘技巧，让拥有枪支的农场主们一筹莫展。</p>
+                </article>
+                <article class="card">
+                    <span class="card-icon">👨‍👩‍👧‍👦</span>
+                    <h3>家庭团结</h3>
+                    <p>在危机时刻，狐狸爸爸展现了极强的领导力，而他的四个孩子也展现了各自的特长，共同面对困难。</p>
+                </article>
+                <article class="card">
+                    <span class="card-icon">🏰</span>
+                    <h3>地下冒险</h3>
+                    <p>故事构建了一个宏大的地下世界，充满了想象力与探索的乐趣，让孩子们对地下生活充满好奇。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 故事概览 -->
+    <section id="story" class="story-overview">
+        <div class="container">
+            <div class="story-container">
+                <div class="story-visual">
+                    <img src="https://picsum.photos/seed/digging/500/350.jpg" alt="狐狸一家在地下挖掘" width="500" height="350">
+                </div>
+                <div class="story-text">
+                    <h3>经典情节回顾</h3>
+                    <p>故事发生在威利旺卡式的虚构小镇。狐狸爸爸为了家人，每晚都会去博吉斯、邦斯和比恩三个农场主那里偷鸡。农场主们恼羞成怒，联合起来在狐狸洞口安放枪支，并挖掘地道试图困住他们。</p>
+                    <p>狐狸爸爸并没有放弃，他带领全家在地下继续挖掘，不仅为了生存，更为了寻找更好的食物来源。他们挖通了三个农场主的仓库，最终与动物们建立了地下王国，实现了真正的自由。</p>
+                    <ul class="story-list">
+                        <li>面对强敌的威胁，保持冷静与乐观</li>
+                        <li>利用有限资源，寻找新的生存空间</li>
+                        <li>战胜贪婪的农场主，维护动物权益</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 角色分析 -->
+    <section id="characters" class="characters-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>故事中的关键角色</h2>
+                <p>每个角色都代表了人性中不同的一面，共同推动了情节的发展。</p>
+            </div>
+            <div class="character-grid">
+                <div class="character-card">
+                    <div class="char-avatar">🦊</div>
+                    <h3>狐狸爸爸</h3>
+                    <span class="role">主角 / 智慧领袖</span>
+                    <p>狡猾、机智、勇敢且充满爱心的父亲形象。他是家庭的守护者，善于思考并带领大家走出困境。</p>
+                </div>
+                <div class="character-card">
+                    <div class="char-avatar">🐔</div>
+                    <h3>狐狸妈妈</h3>
+                    <span class="role">支持者 / 精神支柱</span>
+                    <p>温柔而坚定，在危机时刻给予家人安慰和鼓励，是维系家庭情感的关键纽带。</p>
+                </div>
+                <div class="character-card">
+                    <div class="char-avatar">🐷</div>
+                    <h3>博吉斯</h3>
+                    <span class="role">反派 / 贪婪的养鸡场主</span>
+                    <p>肥胖、暴躁且极度贪婪。他代表了试图通过武力消灭异己的压迫者。</p>
+                </div>
+                <div class="character-card">
+                    <div class="char-avatar">🦆</div>
+                    <h3>其他动物</h3>
+                    <span class="role">盟友 / 食物来源</span>
+                    <p>在地下挖掘过程中，他们获得了鼹鼠、獾等动物的帮助，象征着弱小者的团结。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section id="faq" class="faq-section">
+        <div class="container" style="max-width: 800px;">
+            <div class="section-header">
+                <h2>关于《聪明的狐狸爸爸》</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">这个故事适合几岁的孩子阅读？</div>
+                <div class="faq-answer">
+                    <p>这本书通常适合5-10岁的儿童阅读。其语言生动活泼，情节紧张刺激但不过于恐怖，非常适合作为亲子共读的读物。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">作者是谁？这本书有什么背景？</div>
+                <div class="faq-answer">
+                    <p>作者是英国著名儿童文学作家罗尔德·达尔（Roald Dahl）。这本书于1970年出版，以其独特的黑色幽默和对权威的讽刺而闻名。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">故事的核心寓意是什么？</div>
+                <div class="faq-answer">
+                    <p>核心寓意在于智慧可以战胜暴力，家庭团结是战胜一切困难的基础，同时也鼓励孩子们勇于挑战不合理的规定。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">除了这本书，罗尔德·达尔还有哪些经典作品？</div>
+                <div class="faq-answer">
+                    <p>罗尔德·达尔还有《查理和巧克力工厂》、《玛蒂尔达》、《詹姆斯和大仙桃》等脍炙人口的作品。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.8;">
+                        本站致力于推广经典儿童文学，为家长和孩子提供优质的阅读指南与资源分享。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#story">故事简介</a></li>
+                        <li><a href="#themes">核心主题</a></li>
+                        <li><a href="#characters">角色分析</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>阅读推荐</h4>
+                    <ul>
+                        <li><a href="#">罗尔德·达尔全集</a></li>
+                        <li><a href="#">儿童绘本推荐</a></li>
+                        <li><a href="#">亲子阅读技巧</a></li>
+                        <li><a href="#">儿童文学评论</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 聪明的狐狸爸爸 - 经典儿童文学推广. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项状态
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
